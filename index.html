@@ -22,7 +22,7 @@
     <source srcset="./images/bg-desktop.png" media="(min-width: 640px)">
     <img class="absolute w-full h-full object-cover inset-0 md:inset-x-0 md:bottom-0 md:h-auto md:mt-auto" src="./images/bg-mobile.png" alt="blue wave background image">
   </picture>
-  <main class="relative mx-6 space-y-4 translate-y-6">
+  <main class="relative mx-6 space-y-4 md:flex md:gap-8">
     <section class="bg-blue-dark p-10 rounded-tl-lg rounded-b-lg rounded-tr-[100px]">
       <img class="col-span-full" src="./images/logo.svg" alt="Fylo logo">
       <div class="flex gap-3.5 mt-8">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-blue-dark px-8 pt-8 pb-12 text-blue-pale rounded-lg">
+    <section class="relative bg-blue-dark px-8 pt-8 pb-12 text-blue-pale rounded-lg">
       <h1 class="text-center text-sm">You’ve used <span class="font-bold">815 GB</span> of your storage</h1>
       <div>
         <div class="bg-blue-darkest rounded-full p-0.5 flex flex-row mt-4 mb-2">
@@ -50,17 +50,17 @@
           <p>1000 GB</p>
         </div>
       </div>
-    </section>
-    <section class="flex">
-      <p class="bg-white text-blue-darkest py-4 px-6 rounded-lg flex items-center justify-center gap-2 mx-auto -translate-y-12">
-        <span class="text-[2.5rem] leading-none font-bold">185</span><span class="text-sm text-blue-gray font-bold tracking-wide uppercase">GB Left</span>
-      </p>
+      <section class="absolute flex inset-x-0 translate-y-4">
+        <p class="bg-white text-blue-darkest py-4 px-6 rounded-lg flex items-center justify-center gap-2 mx-auto">
+          <span class="text-[2.5rem] leading-none font-bold">185</span><span class="text-sm text-blue-gray font-bold tracking-wide uppercase">GB Left</span>
+        </p>
+      </section>
     </section>
   </main>
 
-  <footer class="fixed bottom-0 inset-x-0 text-center text-xs py-2 opacity-0 translate-y-2 hover:opacity-100 hover:translate-y-0 transform transition ease-in-out duration-150">
-    Challenge by <a class="underline hover:text-black" href="https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n" target="_blank">Frontend Mentor</a>.
-    Coded by <a class="underline hover:text-black" href="https://www.frontendmentor.io/profile/wendyhamel" target="_blank">Wendy Hamel</a>.
+  <footer class="fixed bottom-0 inset-x-0 text-center text-xs py-2 bg-blue-dark/80 text-blue-pale opacity-0 translate-y-2 hover:opacity-100 hover:translate-y-0 transform transition ease-in-out duration-150">
+    Challenge by <a class="underline hover:text-gradient-end" href="https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n" target="_blank">Frontend Mentor</a>.
+    Coded by <a class="underline hover:text-gradient-end" href="https://www.frontendmentor.io/profile/wendyhamel" target="_blank">Wendy Hamel</a>.
   </footer>
 </body>
 </html>
