@@ -5,27 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind play cdn and local tailwind config file -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/tailwind.config.js"></script>
+
 </head>
-<body>
+<body class="antialiased bg-blue-darkest min-h-screen grid place-item-center">
+  <picture>
+    <source srcset="./images/bg-desktop.png" media="(min-width: 640px)">
+    <img class="absolute w-full h-full object-cover inset-0 md:inset-x-0 md:bottom-0 md:h-auto md:mt-auto" src="./images/bg-mobile.png" alt="blue wave background image">
+  </picture>
+  <main class="relative mx-6 space-y-4 translate-y-6">
+    <section class="bg-blue-dark p-10 rounded-tl-lg rounded-b-lg rounded-tr-[100px]">
+      <img class="col-span-full" src="./images/logo.svg" alt="Fylo logo">
+      <div class="flex gap-3.5 mt-8">
+        <div class="bg-blue-darkest w-12 h-12 p-3 rounded-lg grid place-items-center">
+          <img src="./images/icon-document.svg" alt="icon document">
+        </div>
+        <div class="bg-blue-darkest w-12 h-12 p-3 rounded-lg grid place-items-center">
+          <img src="./images/icon-folder.svg" alt="icon folder">
+        </div>
+        <div class="bg-blue-darkest w-12 h-12 p-3 rounded-lg grid place-items-center">
+          <img src="./images/icon-upload.svg" alt="icon upload">
+        </div>
+      </div>
+    </section>
+    <section class="bg-blue-dark px-8 pt-8 pb-12 text-blue-pale rounded-lg">
+      <h1 class="text-center text-sm">You’ve used <span class="font-bold">815 GB</span> of your storage</h1>
+      <div>
+        <div class="bg-blue-darkest rounded-full p-0.5 flex flex-row mt-4 mb-2">
+          <div class="bg-gradient-to-r from-gradient-start to-gradient-end rounded-full p-0.5 flex justify-end w-3/4">
+            <div class="rounded-full bg-white w-2 h-2"></div>
+          </div>
+        </div>
+        <div class="flex justify-between gap-2 font-bold text-xs">
+          <p>0 GB</p>
+          <p>1000 GB</p>
+        </div>
+      </div>
+    </section>
+    <section class="flex">
+      <p class="bg-white text-blue-darkest py-4 px-6 rounded-lg flex items-center justify-center gap-2 mx-auto -translate-y-12">
+        <span class="text-[2.5rem] leading-none font-bold">185</span><span class="text-sm text-blue-gray font-bold tracking-wide uppercase">GB Left</span>
+      </p>
+    </section>
+  </main>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="fixed bottom-0 inset-x-0 text-center text-xs py-2 opacity-0 translate-y-2 hover:opacity-100 hover:translate-y-0 transform transition ease-in-out duration-150">
+    Challenge by <a class="underline hover:text-black" href="https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n" target="_blank">Frontend Mentor</a>.
+    Coded by <a class="underline hover:text-black" href="https://www.frontendmentor.io/profile/wendyhamel" target="_blank">Wendy Hamel</a>.
+  </footer>
 </body>
 </html>
