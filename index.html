@@ -17,15 +17,15 @@
   <script src="src/tailwind.config.js"></script>
 
 </head>
-<body class="antialiased bg-blue-darkest min-h-screen grid place-item-center">
+<body class="antialiased bg-blue-darkest min-h-screen md-grid md:place-items-center">
   <picture>
-    <source srcset="./images/bg-desktop.png" media="(min-width: 640px)">
-    <img class="absolute w-full h-full object-cover inset-0 md:inset-x-0 md:bottom-0 md:h-auto md:mt-auto" src="./images/bg-mobile.png" alt="blue wave background image">
+    <source srcset="./images/bg-desktop.png" media="(min-width: 768px)">
+    <img class="absolute w-full h-full object-cover inset-0 md:inset-x-0 md:bottom-0 lg:h-auto lg:mt-auto xl:h-full" src="./images/bg-mobile.png" alt="blue wave background image">
   </picture>
-  <main class="relative mx-6 space-y-4 md:flex md:gap-8">
-    <section class="bg-blue-dark p-10 rounded-tl-lg rounded-b-lg rounded-tr-[100px]">
+  <main class="relative mt-32 mx-6 space-y-4 max-w-screen-lg md:mx-auto md:space-x-0 md:flex md:gap-8 md:justify-center md:mt-72 md:px-12">
+    <section class="bg-blue-dark p-10 rounded-tl-lg rounded-b-lg rounded-tr-[100px] md:pr-32">
       <img class="col-span-full" src="./images/logo.svg" alt="Fylo logo">
-      <div class="flex gap-3.5 mt-8">
+      <div class="flex gap-3.5 mt-8 md:pr-2">
         <div class="bg-blue-darkest w-12 h-12 p-3 rounded-lg grid place-items-center">
           <img src="./images/icon-document.svg" alt="icon document">
         </div>
@@ -37,8 +37,8 @@
         </div>
       </div>
     </section>
-    <section class="relative bg-blue-dark px-8 pt-8 pb-12 text-blue-pale rounded-lg">
-      <h1 class="text-center text-sm">You’ve used <span class="font-bold">815 GB</span> of your storage</h1>
+    <section class="relative bg-blue-dark px-8 pt-8 pb-12 text-blue-pale rounded-lg md:grow md:px-10 md:py-10 md:self-end">
+      <h1 class="text-center text-sm md:text-start md:pr-8">You’ve used <span class="font-bold">815 GB</span> of your storage</h1>
       <div>
         <div class="bg-blue-darkest rounded-full p-0.5 flex flex-row mt-4 mb-2">
           <div class="bg-gradient-to-r from-gradient-start to-gradient-end rounded-full p-0.5 flex justify-end w-3/4">
@@ -50,9 +50,14 @@
           <p>1000 GB</p>
         </div>
       </div>
-      <section class="absolute flex inset-x-0 translate-y-4">
-        <p class="bg-white text-blue-darkest py-4 px-6 rounded-lg flex items-center justify-center gap-2 mx-auto">
+      <section class="absolute flex inset-x-0 translate-y-4 md:top-0 md:right-12">
+        <p class="relative bg-white text-blue-darkest py-4 px-6 rounded-lg flex items-center justify-center gap-2 mx-auto md:ml-auto md:mr-0 md:-translate-y-16">
           <span class="text-[2.5rem] leading-none font-bold">185</span><span class="text-sm text-blue-gray font-bold tracking-wide uppercase">GB Left</span>
+          <svg class="opacity-0 md:opacity-100 absolute right-0 bottom-0 w-12 h-12 text-white translate-y-6" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <g id="v" transform="translate(-77, -115)" fill="currentColor">
+              <polygon id="Path" points="78.7108154 115.685974 117.710815 115.685974 117.710815 154.685974"></polygon>
+            </g>
+          </svg>
         </p>
       </section>
     </section>
